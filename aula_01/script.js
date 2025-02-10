@@ -1,0 +1,1 @@
+console.log("vim de um arquivo externo");
