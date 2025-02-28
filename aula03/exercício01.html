@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulários</title>
 </head>
-<script>
-    // 1. Exibe uma mensagem de boas-vindas ao usuário 
-    alert("Oi! Bem-vindo ao nosso site!");
-    
-</script>
 <body>
-    
+    <h1>CADASTRO</h1>
+    <form action="processa01E.php" method="POST">
+        <p>Nom: <input type="text" name="cxnome"></p>
+        <p>Mensagem: <textarea name="mensagem"></textarea></p>
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>
+
+
+
