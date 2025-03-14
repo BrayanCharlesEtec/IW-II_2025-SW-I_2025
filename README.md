@@ -1,2 +1,3 @@
 # IW-II_2025
-10/02
+sem traço = SW
+com traço = IW II
