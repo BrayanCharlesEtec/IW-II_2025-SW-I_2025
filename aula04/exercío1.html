@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1. Formulário GET para calcular a média</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Calcule a Média das Notas</h2>
+    <form method="GET" action="media.php">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="nome_estudante" name="nome_estudante" placeholder="Nome do Estudante" required>
+        <label for="nome_estudante">Nome do Estudante</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="nota_1" name="nota_1" min="0" max="10" placeholder="Nota 1" required>
+        <label for="nota_1">Nota1</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="nota_2" name="nota_2" min="0" max="10" placeholder="Nota 2" required>
+        <label for="nota_2">Nota2</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="nota_3" name="nota_3" min="0" max="10" placeholder="Nota 3" required>
+        <label for="nota_3">Nota3</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Calcular</button>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
