@@ -33,15 +33,33 @@ class Produto {
 
     public function removerEstoque($qtd) {
         if ($qtd > $this->quantidade) {
-            echo "Quantidade insuficiente no estoque.\n";
+            echo "Quantidade insuficiente no estoque.<br>";
         } else {
             $this->quantidade -= $qtd;
         }
     }
 
+    private function formatarPreco($valor) {
+        $partes = explode('.', sprintf('%.2f', $valor));
+        $inteiro = $partes[0];
+        $decimal = $partes[1];
+
+        $inteiro_formatado = '';
+        $len = strlen($inteiro);
+        for ($i = 0; $i < $len; $i++) {
+            if ($i > 0 && ($len - $i) % 3 == 0) {
+                $inteiro_formatado .= '.';
+            }
+            $inteiro_formatado .= $inteiro[$i];
+        }
+
+        return $inteiro_formatado . ',' . $decimal;
+    }
+
     public function mostrarDetalhes() {
         echo "Produto: " . $this->nome . "<br>";
-        echo "Preço: R$ " . number_format($this->preco, 2, ',', '.') . "<br>";
+        echo "Preço: R$ " . $this->formatarPreco($this->preco) . "<br>";
         echo "Quantidade em estoque: " . $this->quantidade . "<br><br>";
     }
 }
+
